@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 5000;
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -65,7 +66,7 @@ io.on('connection', (socket) => {
     });
 });
 
-// Start Server
-server.listen(5000, () => {
-    console.log('Server running on port 5000');
+//server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
+
